@@ -3,23 +3,6 @@ using namespace std;
 
 class Solution {
 public:
-    // void printNumber() {
-    //     int a;
-
-    //     cout << "Enter the number: ";
-    //     cin >> a;
-
-    //     cout << a;
-
-    // }
-
-    // int Addition(int a, int b){
-    //     int c = a+b;
-    //     return c;
-    // }
-
-
-
     // REVERSE ARRAY
     void reverse(int arr[], int n){
         
@@ -40,15 +23,11 @@ int main (){
     
 
     for(int i = 0; i < n ; i++){
-        // arr.push(arr[i]);
         cin >> arr[i];
     }
 
-    // int a,b;
-    // cin >> a >> b;
     Solution rev;
     rev.reverse(arr, n);
-    // cout << res;
 
 }
 
