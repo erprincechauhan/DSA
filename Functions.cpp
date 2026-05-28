@@ -13,42 +13,17 @@ public:
 
     // }
 
-    // int Addition(int a, int b){
-    //     int c = a+b;
-    //     return c;
-    // }
-
-
-
-    // REVERSE ARRAY
-    void reverse(int arr[], int n){
-        
-        for (int j = n-1 ; j >= 0; j--){
-            cout << arr[j] << " ";
-        }
+    int Addition(int a, int b){
+        int c = a+b;
+        return c;
     }
 };
 
 int main (){
-    int n ;
-
-    cout << "Enter the number of elements: ";
-    cin >> n;
-
-    int arr[n];
-    cout << "Enter the elements: " << endl;
-    
-
-    for(int i = 0; i < n ; i++){
-        // arr.push(arr[i]);
-        cin >> arr[i];
-    }
-
-    // int a,b;
-    // cin >> a >> b;
-    Solution rev;
-    rev.reverse(arr, n);
+    int a,b;
+    cin >> a >> b;
+    Solution Add;
+    cout << Add.Addition(a, b);
     // cout << res;
-
 }
 
