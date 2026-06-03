@@ -67,6 +67,36 @@ bool armStrong(int n ){
 }
 
 
+
+
+// You are given an integer n. You need to find all the divisors of n. Return all the divisors of n as an array or list in a sorted order.
+
+vector<int> divisor(int n){
+
+    vector<int> divisor;
+
+    // for (int i = 1; i <= n ; i++){ // time complexity = O(n)
+    //     if (n % i == 0){
+    //         divisor.push_back(i);
+    //     }
+    // }
+
+    // for (int i = 1; i <= sqrt(n) ; i++)
+    for (int i = 1; i*i <= n ; i++)
+    { // Time complexity = O(sqrt (n))
+        if (n % i == 0){
+            if((n/i) != i) {
+                divisor.push_back(i);
+                divisor.push_back(n/i);
+            }
+            else divisor.push_back(n/i);
+        }
+    }
+
+    return divisor;
+}
+
+    
 int main (){
     int num;
     cout << "Enter the number: ";
@@ -75,7 +105,8 @@ int main (){
     // countNumber(num);
     // reverse(num);
     // palindrome(num);
-    armStrong(num);
+    // armStrong(num);
+    divisor(num);
     
 
     return 0;
