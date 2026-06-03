@@ -47,6 +47,26 @@ bool palindrome(int n){
 }
 
 
+// You are given an integer n. You need to check whether it is an armstrong number or not. Return true if it is an armstrong number, otherwise return false.
+bool armStrong(int n ){
+    int original = n,num = n;
+    int last_dig , armstrong = 0 , count = 0;
+
+    while (n != 0){
+        count++;
+        n = n/10;
+    }
+
+    while (num != 0){
+        last_dig = num % 10;
+        armstrong = armstrong  + pow(last_dig,count);
+        num = num/10;
+    }
+
+    return armstrong == original;
+}
+
+
 int main (){
     int num;
     cout << "Enter the number: ";
@@ -54,7 +74,8 @@ int main (){
 
     // countNumber(num);
     // reverse(num);
-    palindrome(num);
+    // palindrome(num);
+    armStrong(num);
     
 
     return 0;
