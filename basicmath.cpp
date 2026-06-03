@@ -99,24 +99,32 @@ vector<int> divisor(int n){
 
 // You are given an integer n. You need to check if the number is prime or not. Return true if it is a prime number, otherwise return false.
 bool prime(int n){
-    vector <int> prime;
+    int count = 0;
     for (int i = 1 ; i*i <= n ; i++ ){
         if (n % i == 0){
-            if (n/i != i){
-                prime.push_back(i);
-                prime.push_back(n/i);
-            }
-            else prime.push_back(n/i);
+            if (n/i != i) count++;
+            count++;
         }
     }
 
-    if (prime.size() == 2) return true;
+    if (count == 2) return true;
     else return false;
 }
 
 
+int GCD(int n1,int n2){
+    int gcd;
+    for (int i = 1 ; i <= min(n1,n2);i++){
+        if (n1 % i == 0 && n2 % i == 0){
+            gcd = i;
+        }
+    }
+    return gcd;
+}
+
+
 int main (){
-    int num;
+    int num,num2;
     cout << "Enter the number: ";
     cin >> num ;
 
@@ -127,9 +135,10 @@ int main (){
     // if(armStrong(num)) cout << "Armstrong";
     // else cout << "Not Armstrong";
     // divisor(num);
-    if(prime(num)) cout<< "prime";
-    else cout << "not prime";
-    
+    // if(prime(num)) cout<< "prime";
+    // else cout << "not prime";
+    cin >> num2;
+    gcd(num,num2);
     return 0;
 }
 
