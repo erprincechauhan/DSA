@@ -96,7 +96,25 @@ vector<int> divisor(int n){
     return divisor;
 }
 
-    
+
+// You are given an integer n. You need to check if the number is prime or not. Return true if it is a prime number, otherwise return false.
+bool prime(int n){
+    vector <int> prime;
+    for (int i = 1 ; i*i <= n ; i++ ){
+        if (n % i == 0){
+            if (n/i != i){
+                prime.push_back(i);
+                prime.push_back(n/i);
+            }
+            else prime.push_back(n/i);
+        }
+    }
+
+    if (prime.size() == 2) return true;
+    else return false;
+}
+
+
 int main (){
     int num;
     cout << "Enter the number: ";
@@ -104,11 +122,14 @@ int main (){
 
     // countNumber(num);
     // reverse(num);
-    // palindrome(num);
-    // armStrong(num);
-    divisor(num);
+    // if(palindrome(num)) cout << "Palindrome";
+    // else cout << "Not Palindrome";
+    // if(armStrong(num)) cout << "Armstrong";
+    // else cout << "Not Armstrong";
+    // divisor(num);
+    if(prime(num)) cout<< "prime";
+    else cout << "not prime";
     
-
     return 0;
 }
 
