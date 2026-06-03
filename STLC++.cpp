@@ -15,6 +15,8 @@ void ExplainPair(){
     cout << arr1[1].second.first << endl;
 }
 
+
+// Sequence Containers
 void ExplainVector(){
     // Vector : it is an dynamic container 
     // push_back():- insert element 
@@ -306,10 +308,12 @@ void ExplainMultimap() {
 }
 
 int main (){
+    // Sequence Containers
     ExplainPair();
-    ExplainPair();
+    ExplainVector();
     ExplainList();
     ExplainDeque();
+    // Associative Containers
     ExplainSet();
     ExplainMultiset(); 
     ExplainMap(); 
@@ -318,7 +322,3 @@ int main (){
 
     return 0;
 }
-
-
-
-
