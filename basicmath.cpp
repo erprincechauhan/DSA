@@ -15,12 +15,27 @@ int countNumber(int n){
     return 0;
 }
 
+// You are given an integer n. Return the integer formed by placing the digits of n in reverse order.
+int reverse(int n){
+    int last_dig , reversed = 0;
+
+    while (n != 0){
+        last_dig = n % 10;
+        reversed = (reversed * 10) + last_dig;
+        n = n /10;
+    }
+    cout<< reversed;
+
+    return reversed;
+}
+
 int main (){
     int num;
     cout << "Enter the number: ";
     cin >> num ;
 
-    countNumber(num);
+    // countNumber(num);
+    reverse(num);
     
 
     return 0;
