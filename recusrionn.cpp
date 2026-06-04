@@ -11,8 +11,7 @@ void printnto1(int n){
 
 void print1ton(int n){
     if (n == 0) return; // Base condition where the function stops calling itself
-    print1ton(n);     // here function calls itself until the specific condition is met which is base condition
-    n-- ;              // recursive call like it updated the value of n 
+    print1ton(n-1);     // here function calls itself until the specific condition is met which is base condition
     cout << n << endl;
 
 }
