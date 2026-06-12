@@ -55,6 +55,17 @@ int reversearr(int arr[], int i,int left,int right,int n){ // here i and arr use
     return reversearr(arr,i+1,left,right,n);
 
 }
+bool palindrome(string s, int left , int right,int i){
+    // usind double variable
+    if (left >= right) return true;
+    if(s[left] != s[right]) return false;
+    palindrome(s,left + 1, right - 1);
+
+    // using single variable
+    if (i >= s.size()/2) return true;
+    if (s[i] != s.size() - i -1) return false;
+    return palindrome(s, i+1);
+}
 
 int fibonacci(int n){
     if (n == 0 ) return 0;
