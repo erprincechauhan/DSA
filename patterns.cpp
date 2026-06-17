@@ -352,11 +352,6 @@ public:
         }
     }
 
-    void pattern22(int n){
-        for (int i = 0; i < n; i++){
-            for
-        }
-    }
 
 };
 
