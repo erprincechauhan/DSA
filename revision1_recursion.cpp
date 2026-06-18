@@ -42,16 +42,18 @@ int main(){
     cout << "Enter the number: ";
     cin >> n;
 
-    // int arr[n];
-    // cout << "Enter the elements: " << endl;
-    // for (int i = 0 ; i < n; i++){
-    //     cin >> arr[i];
-    // }
-    // int left = 0 , right = n-1;
+    int arr[n];
+    cout << "Enter the elements: " << endl;
+    for (int i = 0 ; i < n; i++){
+        cin >> arr[i];
+    }
+    int left = 0 , right = n-1;
 
-    // printN(n); 
-    // cout << sumN(n); 
-    // cout << factorial(n);
-    // cout << reversearr(arr,left,right);
+    printN(n); 
+    cout << sumN(n); 
+    cout << factorial(n);
+    cout << reversearr(arr,left,right);
     fibonacci(n);
+
+    return 0;
 }
