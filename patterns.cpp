@@ -352,6 +352,19 @@ public:
         }
     }
 
+    void pattern22(int n) {
+        for (int i = 1; i <= 2 * n -1; i++){
+            for (int j = 1; j <= 2 * n -1 ; j ++){
+                int dist1 = abs (i - n);
+                int dist2 = abs (j - n);
+                int c = max (dist1, dist2);
+                cout << c+1 << " ";
+
+            }
+            cout << endl; 
+        }
+    }
+
 
 };
 
