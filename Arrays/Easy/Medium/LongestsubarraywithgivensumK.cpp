@@ -81,8 +81,8 @@ void Optimal_longestSubarray(vector<int> &nums, int k){
 
 
 /*
-Time Complexity :
-Space Complexity :
+Time Complexity : O(2N) - worst case    
+Space Complexity :O(1)
 */
 }
 
